@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/haddocking/benchmark-tools:
+      branch: main
+      repo: https://github.com/haddocking/benchmark-tools
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/haddocking/benchmark-tools git:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-sangria-giraffe.sh
+        container: qc.acc_grumpy-white-echidna
+  QC.Doc:
+    repos:
+      github.com/haddocking/benchmark-tools find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-pumpkin-beaver.sh
+        container: qc.doc_snazzy-tan-ant
+      github.com/haddocking/benchmark-tools git:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-ruby-oriole.sh
+        container: qc.doc_nippy-heliotrope-fowl
+      github.com/haddocking/benchmark-tools markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-seashell-terrier.sh
+        container: qc.doc_flimsy-mustard-duck
+  QC.Lic:
+    repos:
+      github.com/haddocking/benchmark-tools licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-silver-tarantula.sh
+        container: qc.lic_scaly-cyan-mongoose
+  QC.Sec:
+    repos:
+      github.com/haddocking/benchmark-tools gosec:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-amber-wolverine.sh
+        container: qc.sec_queasy-ruby-zebu
+  QC.Sty:
+    repos:
+      github.com/haddocking/benchmark-tools staticcheck:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-sapphire-salamander.sh
+        container: qc.sty_tasty-cardinal-zebu
+  QC.Ver:
+    repos:
+      github.com/haddocking/benchmark-tools get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-plum-bird.sh
+        container: qc.ver_clammy-jade-owl
+timeout: 5400

@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/haddocking/benchmark-tools git:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-linen-javanese.sh
-        container: qc.acc_skinny-emerald-starfish
+        - /usr/bin/env sh .sqa/script.shabby-purple-uakari.sh
+        container: qc.acc_wiggy-lilac-lion
   QC.Doc:
     repos:
       github.com/haddocking/benchmark-tools find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-salmon-cheetah.sh
-        container: qc.doc_cloudy-sepia-sheepdog
+        - /usr/bin/env sh .sqa/script.baggy-alizarin-tzu.sh
+        container: qc.doc_skinny-lime-clam
       github.com/haddocking/benchmark-tools git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-tomato-dolphin.sh
-        container: qc.doc_ready-aquamarine-wildebeest
+        - /usr/bin/env sh .sqa/script.grumpy-turquoise-guppy.sh
+        container: qc.doc_messy-magenta-forest
       github.com/haddocking/benchmark-tools markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-orchid-dog.sh
-        container: qc.doc_woolly-olivine-emu
+        - /usr/bin/env sh .sqa/script.trippy-taupe-donkey.sh
+        container: qc.doc_snippy-cobalt-shrew
   QC.Lic:
     repos:
       github.com/haddocking/benchmark-tools licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-asparagus-beagle.sh
-        container: qc.lic_tasty-alizarin-tapir
+        - /usr/bin/env sh .sqa/script.scanty-indigo-dog.sh
+        container: qc.lic_frumpy-dandelion-caracal
   QC.Sec:
     repos:
       github.com/haddocking/benchmark-tools gosec:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-celadon-dane.sh
-        container: qc.sec_breezy-flax-blue
+        - /usr/bin/env sh .sqa/script.woolly-olive-hare.sh
+        container: qc.sec_boozy-magnolia-lionfish
   QC.Sty:
     repos:
       github.com/haddocking/benchmark-tools staticcheck:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-periwinkle-barb.sh
-        container: qc.sty_sleepy-pear-leopard
+        - /usr/bin/env sh .sqa/script.breezy-dandelion-bongo.sh
+        container: qc.sty_slaphappy-green-beagle
   QC.Ver:
     repos:
       github.com/haddocking/benchmark-tools get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-aqua-maltese.sh
-        container: qc.ver_tacky-olivine-dhole
+        - /usr/bin/env sh .sqa/script.tasty-carmine-forest.sh
+        container: qc.ver_snappy-harlequin-cougar
 timeout: 5400

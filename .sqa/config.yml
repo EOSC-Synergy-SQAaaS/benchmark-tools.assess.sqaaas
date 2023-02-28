@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       github.com/haddocking/benchmark-tools git:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-xanthic-mist.sh
-        container: qc.acc_stuffy-cerulean-macaque
+        - /usr/bin/env sh .sqa/script.ready-grey-dugong.sh
+        container: qc.acc_woozy-alizarin-dog
   QC.Doc:
     repos:
       github.com/haddocking/benchmark-tools find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-scarlet-cheetah.sh
-        container: qc.doc_tasty-pink-ferret
+        - /usr/bin/env sh .sqa/script.baggy-peach-mammoth.sh
+        container: qc.doc_crappy-flax-dog
       github.com/haddocking/benchmark-tools git:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-lime-liger.sh
-        container: qc.doc_nerdy-ochre-fox
+        - /usr/bin/env sh .sqa/script.stealthy-jade-buffalo.sh
+        container: qc.doc_scanty-russet-rabbit
       github.com/haddocking/benchmark-tools markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-aquamarine-zebra.sh
-        container: qc.doc_leaky-malachite-numbat
+        - /usr/bin/env sh .sqa/script.flimsy-cardinal-albatross.sh
+        container: qc.doc_geeky-wisteria-hyena
   QC.Lic:
     repos:
       github.com/haddocking/benchmark-tools licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-rust-harrier.sh
-        container: qc.lic_tacky-ecru-panda
+        - /usr/bin/env sh .sqa/script.skimpy-ultramarine-cattle.sh
+        container: qc.lic_greasy-lime-otter
   QC.Sec:
     repos:
       github.com/haddocking/benchmark-tools gosec:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-magnolia-chameleon.sh
-        container: qc.sec_skanky-thistle-mau
+        - /usr/bin/env sh .sqa/script.dorky-azure-drever.sh
+        container: qc.sec_fuzzy-crimson-scorpion
   QC.Sty:
     repos:
       github.com/haddocking/benchmark-tools staticcheck:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-ultramarine-foxhound.sh
-        container: qc.sty_foggy-gold-pig
+        - /usr/bin/env sh .sqa/script.blurry-ecru-hummingbird.sh
+        container: qc.sty_ugly-green-dormouse
   QC.Ver:
     repos:
       github.com/haddocking/benchmark-tools get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-purple-emu.sh
-        container: qc.ver_trippy-ruby-lion
+        - /usr/bin/env sh .sqa/script.blurry-aqua-cichlid.sh
+        container: qc.ver_hasty-ultramarine-squirrel
 timeout: 5400
